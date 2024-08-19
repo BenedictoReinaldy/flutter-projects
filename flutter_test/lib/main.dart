@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_app/widgets/sample_botnav.dart';
+import 'package:heroes_app/widgets/sample_listviewbld.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: SampleBotNav(),
+      home: SampleListViewBuilder(),
     );
   }
 }
