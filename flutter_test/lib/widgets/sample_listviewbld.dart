@@ -11,7 +11,7 @@ class SampleListViewBuilder extends StatelessWidget {
         backgroundColor: Colors.purple,
         centerTitle: true,
       ),
-      body: Container(
+      body: SizedBox(
         height: 130,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
