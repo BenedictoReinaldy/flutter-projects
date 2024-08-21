@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/pages/calls_pages.dart';
 import 'package:whatsapp_clone/pages/chat_pages.dart';
+import 'package:whatsapp_clone/pages/communities_pages.dart';
 import 'package:whatsapp_clone/pages/update_pages.dart';
 
 class MainPages extends StatefulWidget {
@@ -19,17 +21,9 @@ class _MainPagesState extends State<MainPages> {
 
   List<Widget> pages = [
     ChatPages(),
-    const UpdatePages(),
-    const Center(
-      child: Text(
-        'Communities Page',
-      ),
-    ),
-    const Center(
-      child: Text(
-        'Calls Page',
-      ),
-    ),
+    UpdatePages(),
+    const CommunitiesPages(),
+    CallsPages(),
   ];
   @override
   Widget build(BuildContext context) {

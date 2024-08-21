@@ -177,6 +177,7 @@ class ChatPages extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12,
                           fontFamily: 'Roboto',
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -197,6 +198,7 @@ class ChatPages extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12,
                           fontFamily: 'Roboto',
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -217,6 +219,7 @@ class ChatPages extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12,
                           fontFamily: 'Roboto',
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -235,6 +238,7 @@ class ChatPages extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'Roboto',
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -246,7 +250,6 @@ class ChatPages extends StatelessWidget {
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return ListTile(
-                  tileColor: Colors.amber,
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
                       data[index]['photoUrl'],
@@ -287,6 +290,7 @@ class ChatPages extends StatelessWidget {
                             '1',
                             style: TextStyle(
                               fontSize: 10,
+                              color: Colors.black,
                             ),
                           ),
                         ),
