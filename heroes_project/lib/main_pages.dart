@@ -16,7 +16,7 @@ class _MainPages extends State<MainPages> {
   }
 
   List<Widget> pages = [
-    HomePage(),
+    const HomePage(),
     const Center(
       child: Text(
         'This is Search',

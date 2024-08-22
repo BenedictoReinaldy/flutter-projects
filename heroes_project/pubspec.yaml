@@ -58,17 +58,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/soekarno.jpg
-    - assets/images/hatta.jpg
-    - assets/images/diponegoro.jpg
-    - assets/images/kartini.jpg
-    - assets/images/maria.jpg
-    - assets/images/sutomo.jpg
-    - assets/images/yamin.jpg
-    - assets/images/supratman.jpg
-    - assets/images/dien.jpeg
-    - assets/images/soedirman.jpg
-    - assets/images/dewantara.jpg
+    - assets/images/soekarno.png
+    - assets/images/hatta.png
+    - assets/images/diponegoro.png
+    - assets/images/kartini.png
+    - assets/images/maria.png
+    - assets/images/sutomo.png
+    - assets/images/supratman.png
+    - assets/images/dien.png
+    - assets/images/soedirman.png
+    - assets/images/dewantara.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -89,6 +88,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/poppins/Poppins-Regular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

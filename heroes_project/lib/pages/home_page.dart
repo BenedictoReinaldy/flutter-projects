@@ -1,58 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:heroes_project/widget/pahlawan_daerah.dart';
-import 'package:heroes_project/widget/pahlawan_revolusi.dart';
-import 'package:heroes_project/widget/proklamator.dart';
+import 'package:heroes_project/data.dart';
+import 'package:heroes_project/widget/items.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
-  final List pahlawandaerah = [
-    'Cut Nyak Dien',
-    'WR Supratman',
-    'Maria Tiahahu',
-    'Imam Bonjol',
-    'Diponegoro',
-    'RA Kartini',
-    'Pattimura',
-    'Moh. Yamin',
-    'Agus Salim',
-  ];
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
+class _HomePageState extends State<HomePage> {
+  final List<Pahlawan> pahlawan = allData;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        elevation: 2,
+        shadowColor: Colors.amber,
         title: const Text(
           'Heroes App',
           style: TextStyle(
             fontFamily: 'Amsterdam',
-            fontSize: 38,
+            fontSize: 30,
             letterSpacing: 4,
           ),
         ),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.only(right: 16.0),
             child: Icon(
-              Icons.bookmark_border,
+              Icons.bookmark_border_outlined,
               size: 30,
             ),
-          )
+          ),
         ],
       ),
-      body: Column(
-        children: [
-          const Proklamator(),
-          const Divider(
-            height: 1,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            crossAxisCount: 2,
+            childAspectRatio: 0.55,
           ),
-          const PahlawanDaerah(),
-          const Divider(
-            height: 1,
-          ),
-          PahlawanRevolusi(),
-        ],
+          itemBuilder: (context, index) {
+            return ItemsWidget(pahlawan: allData[index]);
+          },
+          itemCount: pahlawan.length,
+        ),
       ),
     );
   }
