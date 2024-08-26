@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroes_project/pages/home_page.dart';
+import 'package:heroes_project/pages/search_page.dart';
 
 class MainPages extends StatefulWidget {
   const MainPages({super.key});
@@ -17,12 +18,7 @@ class _MainPages extends State<MainPages> {
 
   List<Widget> pages = [
     const HomePage(),
-    const Center(
-      child: Text(
-        'This is Search',
-        style: TextStyle(fontSize: 30),
-      ),
-    ),
+    const SearchPage(),
   ];
 
   @override
